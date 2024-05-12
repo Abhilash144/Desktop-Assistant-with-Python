@@ -20,11 +20,12 @@ conda env list
 conda activate assistant1
 ...
 
+4. check out the library installed
 ... bash
 pip list
 ... bash
 
-4. Install all the packages presnt in requirements list
+5. Install all the packages presnt in requirements list
 
 ... bash
 pip install -r requirements.txt
