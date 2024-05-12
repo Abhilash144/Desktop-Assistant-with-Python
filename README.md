@@ -4,29 +4,29 @@
 
 1. create a virtual environment 
 
-... bash
+```bash
 conda create -n assistant1 python=3.8
-...
+```
 
 2. check out the created virtual environment
 
-... bash
+```bash
 conda env list
-...
+```
 
 3. Activate the virtual environment
 
-... bash
+```bash
 conda activate assistant1
-...
+```
 
 4. check out the library installed
-... bash
+```bash
 pip list
-... bash
+```
 
 5. Install all the packages presnt in requirements list
 
-... bash
+```bash
 pip install -r requirements.txt
-... bash
+```
