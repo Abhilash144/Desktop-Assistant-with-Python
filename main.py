@@ -1,4 +1,3 @@
-
 import pyttsx3
 import speech_recognition as sr
 import datetime
@@ -29,8 +28,6 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-#speak("Hello I am a programmer, How are You ?")
-
 
 #Speech Recognition function
 
@@ -56,6 +53,51 @@ def takeCommand():
         return query
     
 
-text = takeCommand()
 
-speak(text)
+#The function for wish me by using time
+def wish_me():
+    hour = (datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+        speak("Good morning Abhilash sir. How are you doing")
+    
+    elif hour>=12 and hour<18:
+        speak("Good afternoon Abhilash sir. How are you doing")
+
+    else:
+        speak("Good evening Abhilash sir. How are you doing")
+    
+    speak("I am JARVIS. Tell me sir how can i help you")
+
+
+
+if __name__ == "__main__":
+
+    wish_me()
+
+    while True:
+        query = takeCommand().lower()
+        print(query)
+    
+        if "wikipedia" in query:
+            speak("searching wikipedia")
+            query = query.replace("wikipedia","")
+            print(query)
+
+            result = wikipedia.summary(query, sentences = 2)
+            speak("According to wikipedia")
+            print(result)
+            speak(result)
+        elif "youtube" in query:
+            speak("opening youtube")
+            webbrowser.open("youtube.com")
+        elif "google" in query:
+            speak("opening google")
+            webbrowser.open("google.com")
+        elif 'time' in query:
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"Sir the time is {strTime}")
+        elif "goodbye" in query:
+            speak("ok sir, I am always here for you. Bye Bye!")
+            exit()
+
+

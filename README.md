@@ -5,7 +5,7 @@
 1. create a virtual environment 
 
 ```bash
-conda create -n assistant1 python=3.8
+conda create -n assistant2 python=3.10
 ```
 
 2. check out the created virtual environment
@@ -17,7 +17,7 @@ conda env list
 3. Activate the virtual environment
 
 ```bash
-conda activate assistant1
+conda activate assistant2
 ```
 
 4. check out the library installed
@@ -29,4 +29,8 @@ pip list
 
 ```bash
 pip install -r requirements.txt
+```
+
+```bash
+streamlit run app.py
 ```
